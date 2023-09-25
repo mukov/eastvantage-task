@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Eastvantage_SwiftUIApp: App {
+    let addressProvider = AdresseGouvAddressProvider()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AddressLocatorView(viewModel: AddressLocatorViewModel(
+                addressProvider: addressProvider))
         }
     }
 }

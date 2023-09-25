@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import MapKit
+
+typealias AddressID = String
+
+struct Address {
+    let id: AddressID
+    let title: String
+    let latitude: Float
+    let longitude: Float
+}

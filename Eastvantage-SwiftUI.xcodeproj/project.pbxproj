@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		84E13E542ABC845600F7B66D /* Eastvantage_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13E532ABC845600F7B66D /* Eastvantage_SwiftUIApp.swift */; };
-		84E13E562ABC845600F7B66D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13E552ABC845600F7B66D /* ContentView.swift */; };
 		84E13E582ABC845800F7B66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E13E572ABC845800F7B66D /* Assets.xcassets */; };
-		84E13E5B2ABC845800F7B66D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E13E5A2ABC845800F7B66D /* Preview Assets.xcassets */; };
+		84E13E642ABC84C000F7B66D /* AddressLocatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13E632ABC84C000F7B66D /* AddressLocatorView.swift */; };
+		84E13E682ABC858C00F7B66D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13E672ABC858C00F7B66D /* Address.swift */; };
+		84E13E6E2ABC8AA000F7B66D /* AddressLocatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13E6D2ABC8AA000F7B66D /* AddressLocatorViewModel.swift */; };
+		84E13E742ABC8C0100F7B66D /* AddressProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13E732ABC8C0100F7B66D /* AddressProvider.swift */; };
+		84E13E762ABC8F1A00F7B66D /* AdresseGouvAddressProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E13E752ABC8F1A00F7B66D /* AdresseGouvAddressProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84E13E502ABC845600F7B66D /* Eastvantage-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eastvantage-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E13E532ABC845600F7B66D /* Eastvantage_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eastvantage_SwiftUIApp.swift; sourceTree = "<group>"; };
-		84E13E552ABC845600F7B66D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84E13E572ABC845800F7B66D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		84E13E5A2ABC845800F7B66D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84E13E632ABC84C000F7B66D /* AddressLocatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressLocatorView.swift; sourceTree = "<group>"; };
+		84E13E672ABC858C00F7B66D /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		84E13E6D2ABC8AA000F7B66D /* AddressLocatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressLocatorViewModel.swift; sourceTree = "<group>"; };
+		84E13E732ABC8C0100F7B66D /* AddressProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressProvider.swift; sourceTree = "<group>"; };
+		84E13E752ABC8F1A00F7B66D /* AdresseGouvAddressProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdresseGouvAddressProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,20 +57,39 @@
 		84E13E522ABC845600F7B66D /* Eastvantage-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				84E13E662ABC853E00F7B66D /* Domain */,
+				84E13E652ABC853000F7B66D /* Application */,
 				84E13E532ABC845600F7B66D /* Eastvantage_SwiftUIApp.swift */,
-				84E13E552ABC845600F7B66D /* ContentView.swift */,
 				84E13E572ABC845800F7B66D /* Assets.xcassets */,
-				84E13E592ABC845800F7B66D /* Preview Content */,
 			);
 			path = "Eastvantage-SwiftUI";
 			sourceTree = "<group>";
 		};
-		84E13E592ABC845800F7B66D /* Preview Content */ = {
+		84E13E652ABC853000F7B66D /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				84E13E5A2ABC845800F7B66D /* Preview Assets.xcassets */,
+				84E13E772ABC8F3E00F7B66D /* Service */,
+				84E13E6D2ABC8AA000F7B66D /* AddressLocatorViewModel.swift */,
+				84E13E632ABC84C000F7B66D /* AddressLocatorView.swift */,
 			);
-			path = "Preview Content";
+			path = Application;
+			sourceTree = "<group>";
+		};
+		84E13E662ABC853E00F7B66D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				84E13E732ABC8C0100F7B66D /* AddressProvider.swift */,
+				84E13E672ABC858C00F7B66D /* Address.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		84E13E772ABC8F3E00F7B66D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				84E13E752ABC8F1A00F7B66D /* AdresseGouvAddressProvider.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +150,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E13E5B2ABC845800F7B66D /* Preview Assets.xcassets in Resources */,
 				84E13E582ABC845800F7B66D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E13E562ABC845600F7B66D /* ContentView.swift in Sources */,
+				84E13E762ABC8F1A00F7B66D /* AdresseGouvAddressProvider.swift in Sources */,
+				84E13E742ABC8C0100F7B66D /* AddressProvider.swift in Sources */,
+				84E13E642ABC84C000F7B66D /* AddressLocatorView.swift in Sources */,
+				84E13E6E2ABC8AA000F7B66D /* AddressLocatorViewModel.swift in Sources */,
+				84E13E682ABC858C00F7B66D /* Address.swift in Sources */,
 				84E13E542ABC845600F7B66D /* Eastvantage_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +294,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Eastvantage-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = DXK4KP95FM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +322,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Eastvantage-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = DXK4KP95FM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

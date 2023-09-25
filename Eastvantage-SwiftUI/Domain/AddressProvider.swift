@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol AddressProvider {
+    func fetchAddresses(query: String) async throws -> [Address]
+}

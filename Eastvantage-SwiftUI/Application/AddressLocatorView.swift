@@ -8,32 +8,39 @@
 import MapKit
 import SwiftUI
 
-struct AddressListView: View {
-    @StateObject var viewModel: AddressListViewModel
+struct AddressLocatorView: View {
+    @StateObject var viewModel: AddressLocatorViewModel
     
-    @State private var region = MKCoordinateRegion(
+    @State var mapRegion: MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(
             latitude: 40.83834587046632,
             longitude: 14.254053016537693),
         span: MKCoordinateSpan(
             latitudeDelta: 0.03,
-            longitudeDelta: 0.03)
-                    )
+            longitudeDelta: 0.03))
     
     var body: some View {
-        switch(viewModel.state) {
-        case .error(let message):
-            Text(message)
-        case .noData:
-            Text("Type an address in the search filed above")
-        case .list(let addresses):
-            VStack {
+        NavigationStack {
+            switch(viewModel.state) {
+            case .error(let message):
+                Text(message)
+            case .noData:
+                Text("Type an address in the search filed above")
+            case .loading:
+                ProgressView()
+            case .list(let addresses):
                 List(addresses, id: \.id) { address in
-                    Text(address.title)
+                    Button(action: {
+                        mapRegion = address.region
+                    }) {
+                        Text(address.title)
+                    }
                 }
-                Map(coordinateRegion: $region)
+                Map(coordinateRegion: $mapRegion)
                     .edgesIgnoringSafeArea(.all)
+                    .border(.black)
             }
         }
+        .searchable(text: $viewModel.searchedQuery, prompt: "Enter address here")
     }
 }
